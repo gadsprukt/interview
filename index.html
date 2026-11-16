@@ -2,6 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="theme-color" content="#FCECDD">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="מחקר על הצרכים של גברים בישראל בתחום החוסן הנפשי והרגשי. שיחה של 45 דקות בזום, בלי מכירה ובלי מחויבות.">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -17,59 +18,72 @@
 <title>חוסן נפשי אצל גברים בני 28–35 בישראל: שיחת מחקר</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-/* Layout idea: single narrow reading column, quiet research-note feel, one strong action block at the end. */
+/* Palette sampled from the header banner: sunset sky, deep green type, green rule. Heebo throughout. */
 :root{
-  --paper:#F3F5F2;
-  --ink:#18231F;
-  --muted:#58665F;
-  --line:#D3DAD4;
-  --accent:#2C5B4D;
+  --paper:#FFFAF4;
+  --glow:#FCECDD;
+  --ink:#14201A;
+  --muted:#5A675F;
+  --line:#EBD9C4;
+  --accent:#2E623E;
   --accent-ink:#FFFFFF;
-  --panel:#E8EDE9;
-  --display:"Frank Ruhl Libre","David Libre",Georgia,serif;
+  --panel:#FFF3E6;
+  --panel-2:#FDE6CE;
+  --shadow:0 10px 30px rgba(140,90,30,.10);
+  --display:"Heebo","Arial Hebrew",Arial,sans-serif;
   --body:"Heebo","Arial Hebrew",Arial,sans-serif;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#131A17;--ink:#E7ECE8;--muted:#9BA9A1;--line:#2B3631;--accent:#7FC2AC;--accent-ink:#0E1512;--panel:#1B2420;
+    --paper:#0F1713;--glow:#2A2116;--ink:#F2ECDF;--muted:#A8B5AB;--line:#2A372F;--accent:#86C9A3;--accent-ink:#0E1512;--panel:#17211B;--panel-2:#1F2B23;--shadow:0 10px 30px rgba(0,0,0,.35);
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#131A17;--ink:#E7ECE8;--muted:#9BA9A1;--line:#2B3631;--accent:#7FC2AC;--accent-ink:#0E1512;--panel:#1B2420;
+  --paper:#0F1713;--glow:#2A2116;--ink:#F2ECDF;--muted:#A8B5AB;--line:#2A372F;--accent:#86C9A3;--accent-ink:#0E1512;--panel:#17211B;--panel-2:#1F2B23;--shadow:0 10px 30px rgba(0,0,0,.35);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.75}
-main{max-width:680px;margin:0 auto;padding:56px 20px 72px;display:flex;flex-direction:column;gap:44px}
-h1,h2{font-family:var(--display);font-weight:700;text-wrap:balance;margin:0;line-height:1.25}
-h1{font-size:clamp(30px,6vw,42px)}
-h2{font-size:26px}
-p{margin:0}
+body{background-color:var(--paper);background-image:linear-gradient(180deg,var(--glow),var(--paper) 640px);background-repeat:no-repeat;color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:#FDC997;color:#14201A}
+main{max-width:680px;margin:0 auto;padding:40px 20px 80px;display:flex;flex-direction:column;gap:48px}
+h1,h2{font-family:var(--display);font-weight:800;text-wrap:balance;margin:0;line-height:1.25}
+h2{font-size:25px;letter-spacing:-.01em}
+h2::after{content:"";display:block;width:38px;height:3px;border-radius:2px;background:var(--accent);margin-top:12px}
+p{margin:0;text-wrap:pretty}
+b{font-weight:700}
 .head{display:flex;flex-direction:column;gap:12px}
-.photo{width:110px;height:110px;border-radius:50%;border:1px solid var(--line);overflow:hidden;flex:none;background:var(--panel)}
+.hero{margin:0;font-size:0;line-height:0}
+.hero img{width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 14px 40px rgba(140,80,20,.20)}
+.photo{width:112px;height:112px;border-radius:50%;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--line),var(--shadow);overflow:hidden;flex:none;background:var(--panel)}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.hero{font-size:0;line-height:0}
-.hero img{width:100%;height:auto;display:block;border-radius:12px}
-.box-lede{font-family:var(--display);font-size:20px;line-height:1.5;color:var(--ink)}
-section{display:flex;flex-direction:column;gap:14px}
-a{color:var(--accent)}
-.summary{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 28px}
-.summary-body{display:flex;flex-direction:column;gap:14px}
+.box-lede{font-size:21px;line-height:1.5;font-weight:700;color:var(--ink)}
+section{display:flex;flex-direction:column;gap:16px}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+.summary{background:var(--panel);border:1px solid var(--line);border-inline-start:5px solid var(--accent);border-radius:18px;padding:28px 30px;box-shadow:var(--shadow)}
+.summary-body{display:flex;flex-direction:column;gap:16px}
 .summary h2{font-size:22px}
-.summary ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:17px;line-height:1.6}
+.summary h2::after{display:none}
+.summary ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:17px;line-height:1.65}
 .summary li b{color:var(--accent)}
-.cta{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
+.cta{background:linear-gradient(135deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;box-shadow:var(--shadow)}
 .cta-body{display:flex;flex-direction:column;gap:16px;flex:1;min-width:240px}
-.btn{align-self:flex-start;display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;font-size:18px;padding:14px 28px;border-radius:10px}
-.btn:hover{filter:brightness(1.08)}
+.btn{align-self:flex-start;display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;font-size:18px;padding:14px 32px;border-radius:12px;box-shadow:0 6px 16px rgba(46,98,62,.25);transition:transform .15s ease,filter .15s ease}
+.btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
 .btn:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .alt{font-size:16px;color:var(--muted)}
 .alt a{font-weight:500}
+@media (max-width:480px){
+  main{padding:24px 16px 64px;gap:40px}
+  .summary{padding:22px 20px}
+  .cta{padding:24px 20px}
+  h2{font-size:23px}
+  .box-lede{font-size:19px}
+}
 </style>
 </head>
 <body>
