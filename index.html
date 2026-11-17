@@ -67,6 +67,10 @@ a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
 .summary{background:var(--panel);border:1px solid var(--line);border-inline-start:5px solid var(--accent);border-radius:18px;padding:28px 30px;box-shadow:var(--shadow)}
 .summary-body{display:flex;flex-direction:column;gap:16px}
 .summary h2{font-size:22px}
+.summary-head{display:flex;align-items:center;gap:18px}
+.summary-head .photo{width:96px;height:96px}
+.summary-head-text{display:flex;flex-direction:column;gap:8px;min-width:0}
+.summary-head-text h2,.summary-head-text .box-lede{margin:0}
 .summary h2::after{display:none}
 .summary ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:17px;line-height:1.65}
 .summary li b{color:var(--accent)}
@@ -85,6 +89,8 @@ a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
 @media (max-width:480px){
   main{padding:24px 16px 64px;gap:40px}
   .summary{padding:22px 20px}
+  .summary-head{gap:14px}
+  .summary-head .photo{width:72px;height:72px}
   .cta{padding:24px 20px}
   h2{font-size:23px}
   .box-lede{font-size:19px}
@@ -99,8 +105,13 @@ a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
 
   <aside class="summary" aria-label="בקצרה">
     <div class="summary-body">
-    <h2>שיחה של 30 עד 45 דקות איתי, גדי ספרוקט</h2>
-    <p class="box-lede">עזור לי לבנות מסגרת תמיכה חדשה, שתתאים לצרכים של גברים בגיל שלך.</p>
+    <div class="summary-head">
+      <div class="photo"><img src="gad.jpg" alt="גדי ספרוקט" width="96" height="96"></div>
+      <div class="summary-head-text">
+        <h2>שיחה של 30 עד 45 דקות איתי, גדי ספרוקט</h2>
+        <p class="box-lede">עזור לי לבנות מסגרת תמיכה חדשה, שתתאים לצרכים של גברים בגיל שלך.</p>
+      </div>
+    </div>
     <ul>
       <li><b>על מה המחקר:</b> אני מבקש לשמוע מגברים שבונים קריירה ומשפחה איך הם דואגים לחוסן שלהם היום, באילו תחומים הם רוצים יותר תמיכה, ומה עוצר אותם מלפנות למסגרות תמיכה קיימות.</li>
       <li><b>את מי אני מראיין:</b> גברים בני 28 עד 35 בישראל, גם מי שמסתדר טוב היום. לא צריך להיות במשבר.</li>
